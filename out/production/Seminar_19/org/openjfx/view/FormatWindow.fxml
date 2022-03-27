@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="inputPane" prefHeight="700.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.controller.FormatWindow">
+    <center>
+        <GridPane prefHeight="200.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="665.0" minWidth="10.0" prefWidth="636.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="364.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="103.0" minHeight="2.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="210.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="146.0" minHeight="0.0" prefHeight="54.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="261.0" minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="236.0" minHeight="0.0" prefHeight="103.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="260.0" minHeight="10.0" prefHeight="181.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="5.0" prefHeight="11.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+         <children>
+            <Label prefHeight="94.0" prefWidth="594.0" text="Формат ввода состояний: требуется хотя бы два состояния; состояния должны быть уникальными и не совпадать с терапиями; состояния должны быть разделены запятыми с пробелом. Первым должно указываться начальное состояние" textAlignment="CENTER" textFill="#687aab" wrapText="true" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="52.0" prefWidth="572.0" text="Формат ввода терапий: терапии должны быть уникальными и не совпадать с состояниями; терапии должны быть разделены запятыми с пробелом" textAlignment="CENTER" textFill="#687aab" wrapText="true" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="25.0" prefWidth="536.0" text="Формат ввода возраста: натуральное число" textAlignment="CENTER" textFill="#687aab" GridPane.rowIndex="7">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Формат ввода количества итераций: натуральное число от 1 до 50 включительно" textAlignment="CENTER" textFill="#687aab" wrapText="true" GridPane.rowIndex="8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="44.0" prefWidth="626.0" text="Формат ввода количества повторов моделирования: натуральное число от 1 до 100 включительно" textAlignment="CENTER" textFill="#687aab" wrapText="true" GridPane.rowIndex="9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="80.0" prefWidth="619.0" text="Формат ввода стоимостей: константное значение поля вводится построчно для каждого состояния и терапии в виде &quot;Название состояния/терапии: целое неотрицательное число&quot;. Изменяющееся со временем значение вводится построчно для каждой итерации в виде &quot;Номер итерации: состояние/терапия 1: число, состояние/терапия 2: число ...&quot;" textAlignment="CENTER" textFill="#687aab" wrapText="true" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="110.0" prefWidth="604.0" text="Формат ввода эффективности: константное значение поля вводится построчно для каждой терапии в виде &quot;Название терапии: число 1, число 2...&quot;. Числа должны быть в диапазоне от 0 до 1 включительно и соответствовать каждому указанному состоянию. Изменяющееся со временем значение вводится построчно для каждой итерации в виде &quot;Номер итерации; терапия 1: число 1, число 2, ..., ; терапия 2: число 1, число 2, ... &quot; " textAlignment="CENTER" textFill="#687aab" wrapText="true" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="matrLabel" prefHeight="151.0" prefWidth="613.0" text="Формат ввода матрицы переходов: квадратная матрица размером, соответствующем числу состояний с числами от 0 до 1 включительно. В каждой строке матрицы сумма элементов должна быть равна единице. Константная матрица вводится построчно в виде &quot;число 1, число 2&quot;. Изменяющаяся со временем матрица вводится так же построчно в виде" textAlignment="CENTER" textFill="#687aab" wrapText="true" GridPane.rowIndex="6">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="60.0" prefWidth="610.0" text="Формат ввода итераций: целые неотрицательные уникальные числа. Обязательно должна быть указана нулевая итерация" textAlignment="CENTER" textFill="#687aab" wrapText="true" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField editable="false" maxWidth="352.0" prefHeight="25.0" prefWidth="100.0" text="St. 1, St. 2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField editable="false" maxWidth="352.0" text="А, В" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="137.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="227.0" minWidth="10.0" prefWidth="227.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextArea editable="false" maxHeight="80.0" maxWidth="120.0" prefHeight="90.0" prefWidth="122.0" text="St. 1: 1000&#10;St. 2: 2000&#10;A: 1500&#10;В: 2500" GridPane.halignment="CENTER" />
+                  <TextArea editable="false" maxHeight="80.0" maxWidth="221.0" prefHeight="90.0" prefWidth="221.0" text="0: St. 1: 100, St. 2: 200, A: 300, B: 400&#10;10: St. 1: 200, St. 2: 300, A: 400, B: 500" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="132.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="232.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextArea editable="false" maxHeight="100.0" maxWidth="120.0" prefHeight="110.0" prefWidth="126.0" text="A: 0.3, 0.2&#10;B: 0.2, 0.4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <TextArea editable="false" maxHeight="100.0" maxWidth="221.0" prefHeight="200.0" prefWidth="200.0" text="0: A: 0.3, 0.2; B: 0.2, 0.4&#10;5: A: 0.2, 0.2; B: 0.3, 0.3&#10;8: A: 0.9, 0; B: 0.1, 0.4" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="132.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="232.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextArea editable="false" maxHeight="75.0" maxWidth="120.0" prefHeight="200.0" prefWidth="200.0" text="0.3, 0.7&#10;0.2, 0.8" GridPane.halignment="CENTER" />
+                  <TextArea editable="false" maxHeight="75.0" maxWidth="218.0" prefHeight="80.0" prefWidth="218.0" text="0:&#10;0.3, 0.7&#10;0.2, 0.8&#10;5:&#10;0.1, 0.9&#10;0.6, 0.4" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+               </children>
+            </GridPane>
+            <TextField editable="false" maxWidth="352.0" text="28" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField editable="false" maxWidth="352.0" text="32" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField editable="false" maxWidth="352.0" text="60" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+         </children>
+        </GridPane>
+    </center>
+</BorderPane>
